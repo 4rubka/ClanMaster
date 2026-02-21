@@ -1,290 +1,355 @@
-# 🏰 ClanMaster - Minecraft Clan Plugin
+# 🏰 ClanMaster - Advanced Clan Plugin for Minecraft
 
-Потужний плагін для управління кланами на вашому Minecraft сервері з багатою кастомізацією та сучасними функціями.
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)]()
+[![Spigot](https://img.shields.io/badge/Spigot-1.19+-orange)]()
+[![License](https://img.shields.io/badge/license-MIT-green)]()
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue)
-![Spigot](https://img.shields.io/badge/Spigot-1.19+-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
+**Author:** _4rubka_
 
-## ✨ Можливості
+---
 
-### 🎮 Для гравців без клану
-- **Красиве головне меню** з інформацією про гравця
-- **Топ кланів** - перегляд найкращих кланів сервера
-- **Список всіх кланів** - пошук клану для вступу
-- **Статистика гравця** - K/D, вбивства, смерті
-- **Довідка по командах**
+## About
 
-### ⚔️ Для гравців з кланом
-- **Меню клану** з повною інформацією
-- **Управління учасниками** - запрошення, вигнання, підвищення/пониження
-- **Налаштування клану** - дружній вогонь, дім клану, префікс
-- **Бонуси** - нагороди за рівень клану
-- **Клановий скриня** - спільне зберігання
-- **Альянси та вороги** - дипломатія між кланами
+**ClanMaster** is a powerful and feature-rich clan management plugin for Minecraft servers. Create clans, recruit members, declare wars, earn achievements, and dominate the battlefield!
 
-### 🏆 Військова система
-- **Оголошення війни** - `/clan war <клан>`
-- **Завершення війни** - `/clan peace <клан>`
-- **Відстеження вбивств** - автоматичний підрахунок
-- **Військові очки** - рейтинг кланів за перемоги
-- **Нагороди за перемогу** - гроші та XP
+Perfect for PvP servers, factions, and any server that wants a deep clan system with modern features.
 
-### 🎯 Досягнення та титули
-- **Система досягнень** - "Перша кров", "Воїн", "Ветеран", "Легенда"
-- **Титули кланів** - унікальні назви для кланів
-- **Нагороди за досягнення** - XP бонуси
+---
 
-### 📊 Активність та статистика
-- **Відстеження активності** - час останньої активності
-- **Статистика клану** - перемоги, поразки, очки
-- **Добові квіли** - щоденні завдання з нагородами
-- **MOTD клану** - повідомлення дня для учасників
+## Features
 
-## 📋 Команди
+### For Players Without a Clan
+- Beautiful GUI browser to explore all clans
+- Top clans leaderboard by level and war points
+- Player statistics (K/D ratio, kills, deaths)
+- Command help guide
 
-### Основні команди
-| Команда | Опис |
-|---------|------|
-| `/clan` | Відкрити меню клану |
-| `/clan menu` | Відкрити меню клану |
-| `/clan top` | Переглянути топ кланів за рівнем |
-| `/clan wartop` | Топ кланів за військовими очками |
-| `/clan list` | Список всіх кланів |
-| `/clan info [клан]` | Інформація про клан |
-| `/clan stats` | Детальна статистика клану |
-| `/clan create <назва>` | Створити клан |
-| `/clan invite <гравець>` | Запросити гравця |
-| `/clan join` | Приєднатися до клану |
-| `/clan leave` | Вийти з клану |
-| `/clan kick <гравець>` | Вигнати гравця |
-| `/clan promote <гравець>` | Підвищити гравця |
-| `/clan demote <гравець>` | Понизити гравця |
-| `/clan disband` | Розпустити клан |
+### For Clan Members
+- Full clan management GUI
+- Invite, kick, promote, and demote members
+- Clan settings (friendly fire, home, prefix)
+- Level-based bonuses system
+- Clan chest locking
+- Allies and enemies diplomacy
 
-### Команди лідера
-| Команда | Опис |
-|---------|------|
-| `/clan transfer <гравець>` | Передати лідерство |
-| `/clan prefix <текст>` | Встановити префікс клану |
-| `/clan title <назва>` | Встановити титул клану |
-| `/clan motd <текст>` | Повідомлення дня |
-| `/clan desc <опис>` | Встановити опис клану |
-| `/clan sethome` | Встановити дім клану |
-| `/clan delhome` | Видалити дім клану |
-| `/clan home` | Телепортуватися до дому клану |
-| `/clan pvp` | Увімкнути/вимкнути дружній вогонь |
-| `/clan ally <add/remove> <клан>` | Додати/видалити союзника |
-| `/clan enemy <add/remove> <клан>` | Додати/видалити ворога |
-| `/clan war <клан>` | Оголосити війну |
-| `/clan peace <клан>` | Укласти мир |
-| `/clan points <deposit/withdraw> <кількість>` | Клановий банк |
-| `/clan rename <нова назва>` | Перейменувати клан |
+### War System
+- Declare war on other clans
+- Track war kills in real-time
+- War points leaderboard
+- Rewards for winning wars
+- Peace treaties
 
-### Нові команди
-| Команда | Опис |
-|---------|------|
-| `/clan activity` | Активність клану |
-| `/clan wars` | Активні війни |
-| `/clan achievements` | Досягнення клану |
-| `/clan member` | Список учасників |
-| `/clan bank` | Інформація про банк |
-| `/clan deposit <кількість>` | Внести очки |
-| `/clan withdraw <кількість>` | Зняти очки |
+### Achievements & Titles
+- 5+ unique achievements (First Blood, Warrior, Veteran, Legend, War Winner)
+- Custom clan titles
+- XP rewards for achievements
+- Daily kill quests
 
-### Інші команди
-| Команда | Опис |
-|---------|------|
-| `/clanchat` | Увімкнути/вимкнути клановий чат |
-| `/clanchatspy` | Шпигунство за клановим чатом |
-| `/clanchest` | Управління клановою скринею |
-| `/clanadmin` | Адмін команди |
+### Activity Tracking
+- Last activity status
+- Win/loss statistics
+- War history
+- Member contribution tracking
 
-## ⚙️ Налаштування
+### Immersive Experience
+- Sound effects on level up
+- Particle effects for events
+- Action bar notifications
+- Broadcast messages
 
-### config.yml
+---
+
+## Commands
+
+### Basic Commands
+```
+/clan              - Open clan menu
+/clan top          - View top clans by level
+/clan wartop       - View top clans by war points
+/clan list         - List all clans
+/clan info [clan]  - Clan information
+/clan stats        - Detailed clan statistics
+/clan create <name> - Create a new clan
+/clan invite <player> - Invite a player
+/clan join         - Join a clan
+/clan leave        - Leave your clan
+```
+
+### Leader Commands
+```
+/clan transfer <player>    - Transfer leadership
+/clan prefix <text>        - Set clan prefix
+/clan title <name>         - Set clan title
+/clan motd <message>       - Set message of the day
+/clan desc <description>   - Set clan description
+/clan sethome              - Set clan home location
+/clan delhome              - Delete clan home
+/clan home                 - Teleport to clan home
+/clan pvp                  - Toggle friendly fire
+/clan war <clan>           - Declare war
+/clan peace <clan>         - Make peace
+/clan ally <add/remove>    - Manage allies
+/clan enemy <add/remove>   - Manage enemies
+/clan deposit <amount>     - Deposit points to bank
+/clan withdraw <amount>    - Withdraw points from bank
+```
+
+### Admin Commands
+```
+/clanadmin save            - Save all data
+/clanadmin reload          - Reload configuration
+/clanadmin disband <clan>  - Disband a clan
+/clanadmin info <clan>     - View clan info
+/clanadmin givexp <clan> <amount>  - Give XP
+/clanadmin setlevel <clan> <level> - Set clan level
+/clanadmin list            - List all clans
+```
+
+---
+
+## Configuration
+
+### Main Config (config.yml)
 ```yaml
-# Мова: en, uk, de, fr
-language: uk
+# Language: en, uk, de, fr
+language: en
 
-# Вартість створення клану
+# Economy
 costs:
   create: 500.0
   war: 1000.0
   peace: 500.0
 
-# Ліміти
+# Limits
 limits:
   max-members: 20
   max-ally-clans: 5
-  max-enemy-clans: 10
   max-active-wars: 3
 
-# Прогрес
+# Progression
 progress:
   xp-per-level: 1000
   xp-per-kill: 10
   xp-war-kill-bonus: 25
-  xp-daily-quest: 500
 
-# Зберігання: JSON, SQLITE, MYSQL
+# Storage: JSON, SQLITE, MYSQL
 storage:
   type: JSON
 
-# Бонуси за рівні (1-10)
-bonuses:
-  1:
-    coins: 0
-    xp: 0
-    privilege: none
-  2:
-    coins: 100
-    xp: 250
-    privilege: "/home bonus"
-  # ... до 10 рівня
-
-# Функції
-features:
-  clan-chat: true
-  clan-chest: true
+# Feature toggles - disable any feature you don't want
+enabled-features:
   clan-home: true
   clan-wars: true
   achievements: true
-  daily-quests: true
-  sound-effects: true
-  particle-effects: true
+  bonuses: false  # Disabled by default
+
+# Menu text customization - all text in English by default
+menu-text:
+  main-title: "&#ff4faf&l✦ &fClan Menu"
+  stats: "&#5fd9ffStatistics"
+  bonuses: "&#6cffc9Bonuses"
+  manage: "&#f3b4ffManagement"
+  settings: "&#ffd166Settings"
+  wars: "&c&lWars"
+  achievements: "&#5fd9ffAchievements"
 ```
-
-## 🎯 Ранги в клані
-
-1. **LEADER** - Лідер клану (повний доступ)
-2. **OFFICER** - Офіцер (може управляти учасниками)
-3. **MEMBER** - Учасник (базові права)
-
-## 🏆 Досягнення
-
-| Досягнення | Опис | Вимога | Нагорода |
-|-----------|------|--------|----------|
-| First Blood | Перше вбивство | 1 вбивство | 100 XP |
-| Warrior | Воїн | 100 вбивств | 500 XP |
-| Veteran | Ветеран | 500 вбивств | 2000 XP |
-| Legend | Легенда | 1000 вбивств | 5000 XP |
-| War Winner | Переможець війн | 10 перемог | 3000 XP |
-
-## 🔌 Залежності
-
-### Обов'язкові
-- Spigot/Paper 1.19+
-
-### Опціональні
-- **Vault** - економіка
-- **PlaceholderAPI** - відображення інформації
-- **Essentials/CMI** - інтеграція
-- **TAB/TabList** - таб меню
-
-## 📦 PlaceholderAPI
-
-Доступні плейсхолдери:
-- `%clanmaster_name%` - Назва клану
-- `%clanmaster_level%` - Рівень клану
-- `%clanmaster_xp%` - XP клану
-- `%clanmaster_rank%` - Ранг гравця
-- `%clanmaster_members%` - Кількість учасників
-- `%clanmaster_war_points%` - Військові очки
-- `%clanmaster_wins%` - Перемоги
-- `%clanmaster_losses%` - Поразки
-- `%clanmaster_title%` - Титул клану
-- `%clanmaster_motd%` - MOTD клану
-- `%clanmaster_achievements%` - Кількість досягнень
-- `%clanmaster_activity%` - Активність
-- `%clanmaster_kills%` - Вбивства гравця
-- `%clanmaster_deaths%` - Смерті гравця
-- `%clanmaster_kd%` - K/D рейтинг
-- `%clanmaster_joindays%` - Днів у клані
-
-## 🚀 Встановлення
-
-1. Завантажте `ClanMaster-1.0.0-SNAPSHOT.jar`
-2. Помістіть у папку `plugins`
-3. Перезапустіть сервер
-4. Налаштуйте `config.yml` та `lang/*.yml`
-5. Готово!
-
-## 📝 Конфігурація мови
-
-Плагін підтримує:
-- **Українську** (uk) - за замовчуванням
-- **Англійську** (en)
-- **Німецьку** (de)
-- **Французьку** (fr)
-
-Для зміни мови відредагуйте `config.yml`:
-```yaml
-language: uk
-```
-
-## 🎨 GUI Меню
-
-### Меню для гравців без клану
-- Статистика гравця (K/D, вбивства, смерті)
-- Топ кланів за рівнем
-- Список всіх кланів
-- Довідка по командах
-
-### Меню для гравців з кланом
-- Інформація про клан
-- Статистика клану
-- Бонуси
-- Управління учасниками
-- Налаштування
-- Війни
-- Досягнення
-- Детальна інформація
-
-## 💡 Поради
-
-1. Налаштуйте бонуси для мотивації гравців
-2. Використовуйте MySQL для великих серверів
-3. Налаштуйте вартість створення клану під вашу економіку
-4. Регулярно робіть бекап даних кланів
-5. Увімкніть звукові ефекти для кращого досвіду
-6. Налаштуйте щоденні квіли для активності
-
-## 🔧 Адмін команди
-
-```
-/clanadmin save - Зберегти дані
-/clanadmin reload - Перезавантажити конфігурацію
-/clanadmin disband <клан> - Розпустити клан
-/clanadmin info <клан> - Інформація про клан
-/clanadmin givexp <клан> <кількість> - Дати XP
-/clanadmin setwarpoints <клан> <кількість> - Встановити військові очки
-/clanadmin setlevel <клан> <рівень> - Встановити рівень
-/clanadmin addachievement <клан> <досягнення> - Додати досягнення
-/clanadmin list - Список всіх кланів
-```
-
-## 📄 Ліцензія
-
-Цей плагін розповсюджується за ліцензією MIT.
-
-## 🤝 Підтримка
-
-Якщо у вас виникли проблеми або пропозиції, створіть issue на GitHub.
-
-## 📊 Статистика змін
-
-- ✅ Виправлено всі помилки з повідомленнями
-- ✅ Додано систему війн
-- ✅ Додано систему досягнень
-- ✅ Додано титули кланів
-- ✅ Додано MOTD клану
-- ✅ Додано відстеження активності
-- ✅ Додано щоденні квіли
-- ✅ Додано звукові ефекти
-- ✅ Додано нові команди
-- ✅ Покращено GUI меню
-- ✅ Розширена кастомізація
 
 ---
-**ClanMaster v2.0.0** - Найкращий плагін для кланів!
+
+## Clan Ranks
+
+| Rank | Permissions |
+|------|-------------|
+| **LEADER** | Full control |
+| **OFFICER** | Manage members |
+| **MEMBER** | Basic access |
+
+---
+
+## Achievements
+
+| Achievement | Description | Reward |
+|-------------|-------------|--------|
+| First Blood | Get first kill | 100 XP |
+| Warrior | 100 kills | 500 XP |
+| Veteran | 500 kills | 2000 XP |
+| Legend | 1000 kills | 5000 XP |
+| War Winner | Win 10 wars | 3000 XP |
+
+---
+
+## Dependencies
+
+### Required
+- Spigot/Paper 1.19+
+
+### Optional
+- **Vault** - Economy support
+- **PlaceholderAPI** - Placeholder support (for TAB, scoreboards, etc.)
+- **Essentials/CMI** - Integration
+- **TAB/TabList** - Tab list integration
+
+---
+
+## PlaceholderAPI Support
+
+ClanMaster provides **40+ placeholders** for use in TAB, scoreboards, chat formats, and more!
+
+### Basic Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_name%` | Clan name |
+| `%clanmaster_level%` | Clan level |
+| `%clanmaster_xp%` | Current XP |
+| `%clanmaster_xp_needed%` | XP needed for next level |
+| `%clanmaster_next_level%` | Next level number |
+| `%clanmaster_xp_progress%` | Current XP progress |
+| `%clanmaster_xp_needed_next%` | XP needed for next level |
+| `%clanmaster_members%` | Total member count |
+| `%clanmaster_online_members%` | Online members count |
+| `%clanmaster_max_members%` | Max members limit |
+| `%clanmaster_leader%` | Leader name |
+| `%clanmaster_rank%` | Player rank |
+
+### Economy Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_coins%` | Clan coins |
+| `%clanmaster_points%` | Clan points |
+| `%clanmaster_player_points%` | Player's contributed points |
+| `%clanmaster_bonus_coins%` | Bonus coins for current level |
+| `%clanmaster_bonus_xp%` | Bonus XP for current level |
+| `%clanmaster_bonus_privilege%` | Bonus privilege |
+
+### War Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_war_points%` | War points |
+| `%clanmaster_wins%` | Wars won |
+| `%clanmaster_losses%` | Wars lost |
+| `%clanmaster_active_wars%` | Current active wars |
+| `%clanmaster_war_kills%` | Total war kills |
+| `%clanmaster_war_status%` | War status (war/peace/none) |
+
+### Player Stats Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_kills%` | Player kills |
+| `%clanmaster_deaths%` | Player deaths |
+| `%clanmaster_kd%` | K/D ratio |
+| `%clanmaster_daily_kills%` | Daily kills |
+| `%clanmaster_joindays%` | Days in clan |
+| `%clanmaster_activity%` | Activity status |
+
+### Diplomacy Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_allies%` | Allies count |
+| `%clanmaster_enemies%` | Enemies count |
+| `%clanmaster_ally_list%` | Comma-separated ally list |
+| `%clanmaster_enemy_list%` | Comma-separated enemy list |
+
+### Customization Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_title%` | Clan title |
+| `%clanmaster_motd%` | Clan MOTD |
+| `%clanmaster_description%` | Clan description |
+| `%clanmaster_prefix%` | Clan prefix |
+| `%clanmaster_clan_tag%` | Formatted clan tag |
+| `%clanmaster_achievements%` | Achievement count |
+
+### Leaderboard Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_top_name%` | Top clan name |
+| `%clanmaster_top_level%` | Top clan level |
+
+### Other Placeholders
+| Placeholder | Description |
+|-------------|-------------|
+| `%clanmaster_friendlyfire%` | Friendly fire status |
+| `%clanmaster_home_set%` | Home set status |
+
+---
+
+## TAB Configuration Example
+
+```yaml
+# In TAB config.yml
+prefix: "%clanmaster_clan_tag%"
+```
+
+---
+
+## 🚀 Installation
+
+1. Download the latest `.jar` file
+2. Place it in your server's `plugins` folder
+3. Restart the server
+4. Configure `config.yml` and `lang/*.yml` files
+5. Done!
+
+---
+
+## Language Support
+
+ClanMaster supports multiple languages:
+- 🇬🇧 **English** (en) - Default
+- 🇺🇦 **Ukrainian** (uk)
+- 🇩🇪 **German** (de)
+- 🇫🇷 **French** (fr)
+
+Change language in `config.yml`:
+```yaml
+language: en
+```
+
+---
+
+## GUI Menus
+
+### No Clan Menu
+- Player statistics display
+- Top clans browser
+- All clans list
+- Command help
+
+### Clan Member Menu
+- Clan information
+- Statistics & bonuses
+- Member management
+- Settings (PvP, home, prefix)
+- Active wars
+- Achievements
+
+All menu text is customizable in `config.yml` and defaults to English!
+
+---
+
+## Tips for Server Owners
+
+1. **Configure bonuses** to motivate players (or disable with `bonuses: false`)
+2. **Use MySQL storage** for large servers
+3. **Adjust clan creation cost** for your economy
+4. **Enable sound effects** for better immersion
+5. **Set up daily quests** for activity
+6. **Customize menu text** in config to match your server theme
+7. **Disable unwanted features** in `enabled-features` section
+8. **Use PlaceholderAPI** for TAB and scoreboard integration
+
+---
+
+## License
+
+This plugin is distributed under the MIT License.
+
+---
+
+## Support
+
+Having issues or suggestions? Open an issue on our GitHub repository or join our Discord server.
+
+---
+
+- [Discord](https://discord.gg/mUz2k7X6ju)
