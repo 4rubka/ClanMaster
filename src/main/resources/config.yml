@@ -1,0 +1,355 @@
+# ═══════════════════════════════════════════════════════════ #
+#           ClanMaster Configuration File
+#           Author: ClanMaster Team
+#           Version: 2.0.0
+# ═══════════════════════════════════════════════════════════ #
+
+# ═══════════════════════════════════════════════════════════ #
+#                     LANGUAGE SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+# Available languages: en, uk, de, fr
+language: en
+
+# ═══════════════════════════════════════════════════════════ #
+#                     ECONOMY SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+costs:
+  # Cost to create a clan (set to 0 to disable)
+  create: 500.0
+  # Cost for war declaration
+  war: 1000.0
+  # Cost for peace treaty
+  peace: 500.0
+
+economy:
+  # Provider: VAULT or NONE
+  provider: VAULT
+  # Reward for killing enemy clan member
+  kill-reward: 10.0
+  # Reward for winning war
+  war-win-reward: 500.0
+
+# ═══════════════════════════════════════════════════════════ #
+#                     CLAN LIMITS
+# ═══════════════════════════════════════════════════════════ #
+limits:
+  max-members: 20
+  min-members-to-create: 1
+  max-ally-clans: 5
+  max-enemy-clans: 10
+  max-active-wars: 3
+  min-level-for-war: 2
+
+# ═══════════════════════════════════════════════════════════ #
+#                   PROGRESSION SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+progress:
+  # Base XP needed per level
+  xp-per-level: 1000.0
+  # XP multiplier (increase for faster progression)
+  xp-multiplier: 1.0
+  # XP gained per kill
+  xp-per-kill: 10
+  # XP gained per death (optional, usually 0)
+  xp-per-death: 0
+  # XP bonus for war kills
+  xp-war-kill-bonus: 25
+  # Daily kill quest XP reward
+  xp-daily-quest: 500
+
+# ═══════════════════════════════════════════════════════════ #
+#                    STORAGE SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+storage:
+  # Type: JSON, SQLITE, MYSQL
+  type: JSON
+  # Autosave interval in seconds
+  autosave-seconds: 300
+  sqlite:
+    file: clans.db
+  mysql:
+    url: jdbc:mysql://localhost:3306/clanmaster
+    user: root
+    password: password
+    pool-size: 10
+
+# ═══════════════════════════════════════════════════════════ #
+#                    BONUS SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+# Configure bonuses for each clan level
+bonuses:
+  1:
+    coins: 0
+    xp: 0
+    privilege: none
+  2:
+    coins: 100
+    xp: 250
+    privilege: "/home bonus"
+  3:
+    coins: 250
+    xp: 500
+    privilege: "fly 10s"
+  4:
+    coins: 500
+    xp: 750
+    privilege: "special kit"
+  5:
+    coins: 1000
+    xp: 1000
+    privilege: "custom prefix"
+  6:
+    coins: 1500
+    xp: 1500
+    privilege: "war discount 10%"
+  7:
+    coins: 2000
+    xp: 2000
+    privilege: "extra home"
+  8:
+    coins: 2500
+    xp: 2500
+    privilege: "teleportation"
+  9:
+    coins: 3000
+    xp: 3000
+    privilege: "god mode 5s"
+  10:
+    coins: 5000
+    xp: 5000
+    privilege: "legendary status"
+
+# ═══════════════════════════════════════════════════════════ #
+#                   DISPLAY SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+display:
+  # Clan tag format in chat
+  tag-format: "&7[&#ff4faf{clan}&7] "
+  # Enable/disable tab list integration
+  tab-header:
+    enabled: true
+  # Show clan prefix in chat
+  show-prefix: true
+  # Show clan tag in player list
+  show-tag-in-list: true
+
+# ═══════════════════════════════════════════════════════════ #
+#                    TAB SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+tab:
+  header: "&#ff4faf✦ &fClan: &d{clan}"
+  footer: "&#5fd9ff✦ &fГравець: &b{player}"
+
+# ═══════════════════════════════════════════════════════════ #
+#                   FEATURE TOGGLES
+# ═══════════════════════════════════════════════════════════ #
+# Enable/disable specific features
+enabled-features:
+  # Clan chat feature
+  clan-chat: true
+  # Clan chest locking
+  clan-chest: true
+  # Clan home teleportation
+  clan-home: true
+  # Friendly fire toggle
+  friendly-fire: true
+  # Clan wars/enemies system
+  clan-wars: true
+  # Alliances system
+  alliances: true
+  # Clan points/bank system
+  clan-bank: true
+  # XP rewards for kills
+  xp-rewards: true
+  # Clan top menu
+  clan-top-menu: true
+  # MOTD (message of the day)
+  motd: true
+  # Clan titles
+  titles: true
+  # Achievements system
+  achievements: true
+  # Activity tracking
+  activity-tracking: true
+  # Daily kill quests
+  daily-quests: true
+  # War rewards
+  war-rewards: true
+  # Sound effects
+  sound-effects: true
+  # Particle effects
+  particle-effects: true
+  # Clan bonuses/levels (disabled by default)
+  bonuses: false
+
+# ═══════════════════════════════════════════════════════════ #
+#                 MENU TEXT CUSTOMIZATION
+# ═══════════════════════════════════════════════════════════ #
+# Customize menu item names and descriptions (default: English)
+# All text supports color codes (&a, &c, &#rrggbb, etc.)
+menu-text:
+  # Main menu title
+  main-title: "&#ff4faf&l✦ &fClan Menu"
+  
+  # Menu item names
+  stats: "&#5fd9ffStatistics"
+  bonuses: "&#6cffc9Bonuses"
+  manage: "&#f3b4ffManagement"
+  settings: "&#ffd166Settings"
+  members: "&#9b8cffMembers"
+  info: "&#5fd9ffInfo"
+  wars: "&c&lWars"
+  achievements: "&#5fd9ffAchievements"
+  
+  # Menu item descriptions
+  members-desc: "&7Manage/view members"
+  manage-desc: "&7Manage members"
+  settings-desc: "&7Clan preferences"
+  wars-desc: "&7Manage clan wars"
+  achievements-desc: "&7Clan rewards"
+  
+  # Common text
+  level: "Level"
+  members-count: "Members"
+  privilege: "Privilege"
+  click-demote: "&7Click to change rank"
+  prev: "&7« Prev"
+  next: "&7Next »"
+  back: "&c&lBack"
+  back-desc: "&7Return to main menu"
+  
+  # Stats menu
+  stats-title: "&b&lClan Stats"
+  
+  # Bonuses menu
+  bonuses-title: "&a&lClan Bonuses"
+  current-bonus: "&a&lCurrent Bonus (Level {level})"
+  next-bonus: "&e&lNext Bonus (Level {level})"
+  
+  # Settings menu
+  settings-title: "&#ffd166&lSettings"
+  friendly-fire-on: "&c&lFriendly Fire: ON"
+  friendly-fire-off: "&a&lFriendly Fire: OFF"
+  set-home: "&a&lSet Clan Home"
+  delete-home: "&e&lDelete Clan Home"
+  teleport-home: "&d&lTeleport to Clan Home"
+  
+  # Management menu
+  manage-title: "&#f3b4ff&lManagement"
+  
+  # Wars menu
+  wars-title: "&c&lActive Wars"
+  no-wars: "&7No Active Wars"
+  war-vs: "&c&lvs {clan}"
+  
+  # Achievements menu
+  achievements-title: "&6&lAchievements"
+  no-achievements: "&7No Achievements"
+
+# ═══════════════════════════════════════════════════════════ #
+#                 MESSAGE CUSTOMIZATION
+# ═══════════════════════════════════════════════════════════ #
+messages:
+  # Enable action bar messages
+  action-bar: true
+  # Enable title messages for level up
+  title-level-up: true
+  # Enable broadcast for war declarations
+  broadcast-wars: true
+  # Enable broadcast for clan creation
+  broadcast-creation: false
+
+# ═══════════════════════════════════════════════════════════ #
+#                   SOUND SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+sounds:
+  level-up: "ENTITY_PLAYER_LEVELUP"
+  level-up-volume: 1.0
+  level-up-pitch: 1.0
+  war-declared: "BLOCK_ANVIL_PLACE"
+  war-declared-volume: 0.5
+  war-declared-pitch: 1.0
+  peace-made: "BLOCK_END_PORTAL_SPAWN"
+  peace-made-volume: 0.5
+  peace-made-pitch: 1.0
+
+# ═══════════════════════════════════════════════════════════ #
+#                 PARTICLE SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+particles:
+  level-up:
+    enabled: true
+    type: "VILLAGER_HAPPY"
+    count: 50
+  war-kill:
+    enabled: true
+    type: "CLOUD"
+    count: 10
+
+# ═══════════════════════════════════════════════════════════ #
+#                   ACHIEVEMENTS
+# ═══════════════════════════════════════════════════════════ #
+achievements:
+  first-blood:
+    name: "First Blood"
+    description: "Get your first clan kill"
+    requirement: 1
+    reward-xp: 100
+  warrior:
+    name: "Warrior"
+    description: "Get 100 clan kills"
+    requirement: 100
+    reward-xp: 500
+  veteran:
+    name: "Veteran"
+    description: "Get 500 clan kills"
+    requirement: 500
+    reward-xp: 2000
+  legend:
+    name: "Legend"
+    description: "Get 1000 clan kills"
+    requirement: 1000
+    reward-xp: 5000
+  war-winner:
+    name: "War Winner"
+    description: "Win 10 wars"
+    requirement: 10
+    reward-xp: 3000
+
+# ═══════════════════════════════════════════════════════════ #
+#                   ADMIN SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+admin:
+  # Enable admin commands
+  enabled: true
+  # Bypass clan limits
+  bypass-limits: true
+  # Admins can see spy messages
+  spy-default: false
+
+# ═══════════════════════════════════════════════════════════ #
+#                   WAR SETTINGS
+# ═══════════════════════════════════════════════════════════ #
+war:
+  # War duration in minutes (0 = unlimited)
+  duration: 0
+  # Minimum kills to win
+  min-kills-to-win: 10
+  # Auto-end war after duration
+  auto-end: false
+  # Reward for winning
+  reward: 500.0
+  # XP reward for winning
+  xp-reward: 2000
+
+# ═══════════════════════════════════════════════════════════ #
+#              EXAMPLE: DISABLE FEATURES
+# ═══════════════════════════════════════════════════════════ #
+# To disable features, set them to false in enabled-features section above.
+# Example: Disable clan home, wars, and achievements:
+# enabled-features:
+#   clan-home: false
+#   clan-wars: false
+#   achievements: false
+#   bonuses: false
+# Then the buttons will be hidden from menu and commands will be disabled.

@@ -1,0 +1,41 @@
+name: ClanMaster
+main: com.clanmaster.ClanMasterPlugin
+version: 1.0.0
+api-version: 1.19
+author: _4rubka_
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - Essentials
+  - CMI
+  - TAB
+  - TabList
+commands:
+  clan:
+    description: Main clan commands
+    aliases: [clans, c, cl]
+    usage: /clan [create|invite|kick|promote|demote|join|leave|disband|info|top|list|menu|help]
+  clanchat:
+    description: Toggle clan chat
+    aliases: [clanc, cchat, chat]
+  clanchatspy:
+    description: Spy on clan chat
+    aliases: [cs, ccs, spy]
+  clanchest:
+    description: Clan chest management
+    aliases: [cchest, cch, cht]
+  clanadmin:
+    description: Clan administration
+    aliases: [ca, cla]
+    usage: /clanadmin
+permissions:
+  clan.create:
+    default: true
+  clan.create.free:
+    default: op
+  clan.manage:
+    default: op
+  clan.admin:
+    default: op
+  clan.bypass:
+    default: op
